@@ -2,7 +2,7 @@
  *  Project: dot loader thing
  *  Description:
  *  Author: Robert Preus-MacLaren
- *  License:
+ *  License: MIT License https://github.com/RpprRoger/dots/blob/master/license.md
  */
 
 // the semi-colon before function invocation is a safety net against concatenated
