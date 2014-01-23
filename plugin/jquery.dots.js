@@ -58,8 +58,8 @@
         start: function() {
             var self = this;
 
+            self.stopDots();
             function set() {
-                self.stopDots();
                 return setTimeout(function() {
                     self.dots.text( self.charLen( self.next() ) );
                     self.timeout = set();
