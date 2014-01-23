@@ -1,7 +1,7 @@
 /*
- *  Project: clearInput
+ *  Project: dot loader thing
  *  Description:
- *  Author:
+ *  Author: Robert Preus-MacLaren
  *  License:
  */
 
@@ -43,7 +43,12 @@
         next: (function() {
             var current = 0;
             return function() {
-                return current >= this.options.count ? ((current = 0) || current) : ++current;
+                if( current >= this.options.count ) {
+                    current = 0;
+                    return current;
+                }
+                current++;
+                return current;
             };
         })(),
         init: function() {
