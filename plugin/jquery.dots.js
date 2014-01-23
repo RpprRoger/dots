@@ -59,15 +59,16 @@
             var self = this;
 
             function set() {
+                self.stopDots();
                 return setTimeout(function() {
                     self.dots.text( self.charLen( self.next() ) );
                     self.timeout = set();
                 }, self.options.speed);
             }
 
-            return set();
+            self.timeout = set();
         },
-        stop: function() {
+        stopDots: function() {
             if( this.timeout ) {
                 this.dots.empty();
                 clearTimeout( this.timeout );
@@ -80,7 +81,7 @@
         },
         applyOpts: function( options ) {
             if( options === false ) {
-                this.stop();
+                this.stopDots();
             } else if( options === true ) {
                 this.start();
             } else {
