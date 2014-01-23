@@ -1,5 +1,7 @@
 dots plugin
 =========
+# usage
+$(element).dots();
 # options
 ```js
 $(element).dots({
